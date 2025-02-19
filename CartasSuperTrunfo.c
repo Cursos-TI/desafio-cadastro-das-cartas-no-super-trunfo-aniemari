@@ -20,46 +20,54 @@ int main() {
 
     #include <stdio.h>
 
-    printf("Bem vindo ao desafio super trunfo! hoje vamos cadastrar cidades! \n");
+    int main();
 
-    printf("vamos começar? \n");
+        printf("Bem-vindo ao desafio super trunfo! Hoje vamos cadastrar cidades! \n");
+        printf("Vamos começar? \n");
+    
+        // Dados de coleta para cadastro
 
-    // dados de coleta para cadastro
-    char codigoCidade;
-    char estado;
-    char nomeCidade;
-    float pib; 
-    int populacao;
-    float areaCidade; 
-    int numPontosTuristicos;
+        char codigoCidade[10];
+        char estado[3];
+        char nomeCidade[50];
+        float pib; 
+        int populacao;
+        float areaCidade; 
+        int numPontosTuristicos;
+    
+        printf("Digite o estado (em sigla): \n");
+        scanf("%s", estado);
+    
+        printf("Digite o código da cidade (ex: A01, B02): \n");
+        scanf("%s", codigoCidade);
+    
+        printf("Digite o nome da cidade: \n");
+        scanf("%s", nomeCidade);
+    
+        printf("Quantas pessoas moram na cidade?:\n"); 
+        scanf("%d", &populacao);
+    
+        printf("Digite a área da cidade (em km²):\n");
+        scanf("%f", &areaCidade);
+    
+        printf("Digite o PIB da cidade:\n");
+        scanf("%f", &pib);
+    
+        printf("Digite a quantidade de pontos turísticos:\n");
+        scanf("%d", &numPontosTuristicos);
+    
+        // Impressão dos dados cadastrados
+        printf("\n--- Dados da cidade cadastrada ---\n");
+        printf("Estado: %s\n", estado);
+        printf("Código da cidade: %s\n", codigoCidade);
+        printf("Nome da cidade: %s\n", nomeCidade);
+        printf("População: %d\n", populacao);
+        printf("Área da cidade: %.2f km²\n", areaCidade);
+        printf("PIB da cidade: %.2f\n", pib);
+        printf("Quantidade de pontos turísticos: %d\n", numPontosTuristicos);
+    
+        return 0;
+    }
+    
 
-    printf("digite o estado (em sigla): \n");
-    scanf("%s", &estado);
-
-    printf("Digite o código da cidade (ex: A01, B02): \n");
-    scanf("%s", &codigoCidade);
-
-    printf("Digite o nome da cidade: \n");
-    scanf("%s", &nomeCidade);
-
-    printf("Quantas pessoas moram na cidade?:\n"); 
-    scanf("%d", &populacao);
-
-    printf("Digite a área  da cidade:\n");
-    scanf("%d", &areaCidade);
-
-    printf("digite o PIB da cidade:\n");
-    scanf("%d", &pib);
-
-    printf("Digite a quantidade de pontos turísticos:\n");
-    scanf("%d", &numPontosTuristicos);
-}
-void imprimirDados(char codigoCidade[], char nomeCidade[], float pib, int populacao, float area, int numPontosTuristicos) {
-    printf("\n--- Dados da Cidade ---\n");
-    printf("Código da Cidade: %s\n", codigoCidade);
-    printf("Nome da Cidade: %s\n", nomeCidade);
-    printf("PIB: %.2f\n", pib);
-    printf("População: %d\n", populacao);
-    printf("Área: %.2f km²\n", area);
-    printf("Pontos Turísticos: %d\n", numPontosTuristicos);
-}
+   
