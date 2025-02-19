@@ -18,5 +18,48 @@ int main() {
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
 
-    return 0;
+    #include <stdio.h>
+
+    printf("Bem vindo ao desafio super trunfo! hoje vamos cadastrar cidades! \n");
+
+    printf("vamos começar? \n");
+
+    // dados de coleta para cadastro
+    char codigoCidade;
+    char estado;
+    char nomeCidade;
+    float pib; 
+    int populacao;
+    float areaCidade; 
+    int numPontosTuristicos;
+
+    printf("digite o estado (em sigla): \n");
+    scanf("%s", &estado);
+
+    printf("Digite o código da cidade (ex: A01, B02): \n");
+    scanf("%s", &codigoCidade);
+
+    printf("Digite o nome da cidade: \n");
+    scanf("%s", &nomeCidade);
+
+    printf("Quantas pessoas moram na cidade?:\n"); 
+    scanf("%d", &populacao);
+
+    printf("Digite a área  da cidade:\n");
+    scanf("%d", &areaCidade);
+
+    printf("digite o PIB da cidade:\n");
+    scanf("%d", &pib);
+
+    printf("Digite a quantidade de pontos turísticos:\n");
+    scanf("%d", &numPontosTuristicos);
+}
+void imprimirDados(char codigoCidade[], char nomeCidade[], float pib, int populacao, float area, int numPontosTuristicos) {
+    printf("\n--- Dados da Cidade ---\n");
+    printf("Código da Cidade: %s\n", codigoCidade);
+    printf("Nome da Cidade: %s\n", nomeCidade);
+    printf("PIB: %.2f\n", pib);
+    printf("População: %d\n", populacao);
+    printf("Área: %.2f km²\n", area);
+    printf("Pontos Turísticos: %d\n", numPontosTuristicos);
 }
